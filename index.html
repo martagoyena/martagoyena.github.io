@@ -1,94 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Currículum Vitae de [Tu Nombre]</title>
-    <meta name="description" content="Currículum de [tu profesión] con [años] de experiencia">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marta Goyena - Web Personal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header><!-- Datos personales --></header>
-    <main><!-- Contenido principal --></main>
-    <footer><!-- Información adicional --></footer>
+  <header>
+    <h1>Marta Isabel Goyena Morata</h1>
+    <p>Investigadora en XR, Realidad Extendida y Terapia Inmersiva</p>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="curriculum.html">Currículum</a>
+    </nav>
+  </header>
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+      Soy investigadora especializada en tecnologías de realidad extendida (XR) aplicadas a la accesibilidad y la terapia inmersiva. 
+      Me apasiona desarrollar herramientas que mejoren la vida de personas con discapacidad intelectual a través de entornos inmersivos.
+    </p>
+    <p>
+      Tras realizar mis estudios de Grado y Máster en Ingeniería de Telecomunicación, colaboré con el Grupo de Tratamiento de Imágenes (GTI) y actualmente trabajo en el XR Lab de Nokia en proyectos de innovación tecnológica.
+    </p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos destacados</h2>
+    <ul>
+      <li><strong>Incluverso 5G:</strong> Tecnologías XR para inclusión de personas vulnerables mediante redes 5G avanzadas.</li>
+      <li><strong>XRECO - XR mEdia eCOsystem:</strong> Proyecto europeo Horizon Europe sobre entornos XR accesibles.</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:marta.goyena_morata.ext@nokia.com">marta.goyena_morata.ext@nokia.com</a></p>
+    <p>Teléfono: 682440480</p>
+    <p>LinkedIn: <a href="#">Tu perfil LinkedIn</a></p>
+    <p>GitHub: <a href="#">Tu perfil GitHub</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Marta Goyena</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-Elementos HTML Esenciales para Secciones del Currículum
-Para organizar tu CV de manera efectiva, debes utilizar etiquetas semánticas que comuniquen claramente la jerarquía y propósito de cada sección:
-
-<header>: Para tus datos personales y de contacto
-<section>: Para dividir las principales áreas (experiencia, educación, habilidades)
-<article>: Para cada puesto de trabajo o logro específico
-<ul> y <li>: Para listar habilidades y responsabilidades
-<table>: Para información estructurada como educación o certificaciones
-La correcta implementación de estas etiquetas no solo mejora la legibilidad del código, sino que también optimiza tu currículum para los sistemas ATS que analizan candidaturas.
-
-Construyendo un Árbol HTML Básico para tu Currículum
-Crear un currículum HTML efectivo requiere planificación y estructura clara. Veamos paso a paso cómo construir esta estructura:
-
-Ejemplo de Código: Estructura Básica de un Currículum HTML
-<header id="datos-personales">
-    <h1>María Rodríguez</h1>
-    <h2>Desarrolladora Web Frontend</h2>
-    <address>
-        <p>Madrid, España</p>
-        <p>Email: <a href="mailto:maria@ejemplo.com">maria@ejemplo.com</a></p>
-        <p>Teléfono: +34 612 345 678</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/mariar">linkedin.com/in/mariar</a></p>
-    </address>
-</header>
-
-<section id="perfil">
-    <h2>Perfil Profesional</h2>
-    <p>Desarrolladora web con 5 años de experiencia especializada en crear interfaces responsivas y accesibles.</p>
-</section>
-
-<section id="experiencia">
-    <h2>Experiencia Laboral</h2>
-    
-    <article class="puesto">
-        <h3>Desarrolladora Frontend Senior</h3>
-        <p class="empresa-fecha">Empresa XYZ | 2020-Presente</p>
-        <ul>
-            <li>Desarrollo de interfaces responsive utilizando HTML5, CSS3 y JavaScript</li>
-            <li>Implementación de metodología Agile y trabajo en equipo</li>
-        </ul>
-    </article>
-    
-    <article class="puesto">
-        <h3>Desarrolladora Web</h3>
-        <p class="empresa-fecha">Startup ABC | 2018-2020</p>
-        <ul>
-            <li>Creación de componentes reutilizables con React</li>
-            <li>Optimización del rendimiento frontend</li>
-        </ul>
-    </article>
-</section>
-
-<section id="educacion">
-    <h2>Formación Académica</h2>
-    <table>
-        <tr>
-            <th>Título</th>
-            <th>Institución</th>
-            <th>Año</th>
-        </tr>
-        <tr>
-            <td>Grado en Ingeniería Informática</td>
-            <td>Universidad Complutense de Madrid</td>
-            <td>2018</td>
-        </tr>
-    </table>
-</section>
-
-<section id="habilidades">
-    <h2>Habilidades Técnicas</h2>
-    <ul>
-        <li>HTML5 y CSS3</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Git</li>
-    </ul>
-</section>
-
-<footer>
-    <p>Referencias disponibles a petición</p>
-</footer>
