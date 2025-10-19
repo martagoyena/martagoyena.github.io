@@ -1,46 +1,80 @@
-/* styles.css */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  line-height: 1.6;
+  background-color: #f0f0f5; /* Fondo general */
+  color: #333;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+  background-color: #4b0082; /* Morado oscuro */
+  color: white;
   text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 10px 0;
+  font-size: 2.5rem;
+  color: #ffccff; /* Color distinto para tu nombre */
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  text-align: center;
+  margin: 1rem 0 0;
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
   margin: 0 10px;
 }
 
 nav ul li a {
-  color: #333;
+  color: #ffccff; /* enlaces */
   text-decoration: none;
   font-weight: bold;
 }
 
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 section {
-  padding: 20px;
-  margin: 20px;
-  background-color: #fff;
-  border-radius: 5px;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.blanco-lineas {
+  background-color: white;
+  border-left: 5px solid #4b0082; /* línea morada izquierda */
+  border-right: 5px solid #4b0082; /* línea morada derecha */
+  padding: 2rem;
+}
+
+h2 {
+  color: #4b0082;
 }
 
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
+  padding: 1rem;
+  background-color: #4b0082;
+  color: white;
 }
