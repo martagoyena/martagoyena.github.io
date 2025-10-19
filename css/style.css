@@ -17,7 +17,7 @@ header {
   color: #4b0082; /* Texto morado */
   text-align: center;
   padding: 2rem;
-  border-bottom: 4px solid #4b0082; /* línea inferior morada */
+  border-bottom: 2px solid #4b0082; /* línea inferior morada */
 }
 
 header h1 {
@@ -76,8 +76,8 @@ section {
   padding: 2rem;
   background-color: #f9f9f9; /* Secciones claras */
   border-radius: 10px;
-  border-left: 5px solid #4b0082; /* línea morada izquierda */
-  border-right: 5px solid #4b0082; /* línea morada derecha */
+  border-left: 2px solid #4b0082; /* línea morada izquierda */
+  border-right: 2px solid #4b0082; /* línea morada derecha */
 }
 
 h2 {
@@ -102,7 +102,7 @@ p, li, span, a {
 .news-list li {
   margin-bottom: 1em;
   padding: 0.5em;
-  border-left: 4px solid #4b0082; /* borde morado */
+  border-left: 2px solid #4b0082; /* borde morado */
   background-color: #ffffff;
   border-radius: 5px;
 }
@@ -139,5 +139,5 @@ footer {
   padding: 1rem;
   background-color: #ffffff;
   color: #4b0082;
-  border-top: 4px solid #4b0082; /* línea superior morada */
+  border-top: 2px solid #4b0082; /* línea superior morada */
 }
