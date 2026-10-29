@@ -72,6 +72,7 @@ h2.sec{font:600 2rem/1.2 var(--serif);margin:0 0 24px;letter-spacing:-.01em}
 .pub:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(28,43,61,.08);border-color:#C5D4E6}
 .pub[hidden]{display:none}
 .pub .type{display:inline-block;background:var(--sky);color:var(--blue);font-size:.85rem;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:8px}
+.pub .award{display:inline-block;background:#FFF3D6;color:#8A5A00;font-size:.85rem;font-weight:700;padding:3px 10px;border-radius:6px;margin:0 0 8px 6px}
 .pub h3{font:600 1.2rem/1.35 var(--serif);margin:0 0 4px}
 .pub p{margin:0;color:var(--muted);font-size:.97rem}
 .pub .authors{color:var(--ink);margin-bottom:2px}
