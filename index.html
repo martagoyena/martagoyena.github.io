@@ -1,76 +1,239 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marta Goyena | Investigadora XR</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marta Goyena | XR Researcher</title>
+<meta name="description" content="Marta Goyena is a PhD researcher in immersive and accessible XR, cognitive therapy and inclusive human-computer interaction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F8FAFD; --surface:#FFFFFF; --ink:#1C2B3D; --muted:#5A6B7E; --line:#DCE5EF;
+  --blue:#2B63C9; --sky:#E6EFFC; --mint:#E3F4EC; --mint-ink:#1F6B4C;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px}
+
+/* nav */
+.topbar{position:sticky;top:0;z-index:10;background:rgba(248,250,253,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.brand{font:600 1.1rem var(--serif);color:var(--ink);text-decoration:none}
+.topbar ul{display:flex;gap:4px;margin:0;padding:0;list-style:none;overflow-x:auto}
+.topbar li a{display:block;padding:8px 12px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
+.topbar li a:hover{background:var(--sky);color:var(--ink)}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+h1{font:600 clamp(2.6rem,6vw,4.25rem)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 16px}
+.role{font-size:1.25rem;color:var(--ink);margin:0 0 16px;font-weight:500}
+.lede{color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:700;text-decoration:none;border:1.5px solid var(--blue)}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.primary:hover{background:#2250A8}
+.btn.ghost{color:var(--blue);background:transparent}
+.btn.ghost:hover{background:var(--sky)}
+.affil{background:var(--sky);border-radius:18px;padding:28px}
+.affil h2{font:600 1.15rem var(--serif);margin:0 0 16px}
+.affil dl{margin:0}
+.affil dt{font-weight:700;font-size:.95rem}
+.affil dd{margin:0 0 14px;color:var(--muted);font-size:.95rem}
+.affil dd:last-child{margin-bottom:0}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2.sec{font:600 2rem/1.2 var(--serif);margin:0 0 24px;letter-spacing:-.01em}
+.about p{max-width:68ch;margin:0 0 16px}
+.about p:last-child{margin-bottom:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:20px 0 0;list-style:none}
+.tags li{background:var(--mint);color:var(--mint-ink);padding:5px 12px;border-radius:999px;font-size:.9rem;font-weight:500}
+
+/* publications */
+.pubs{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.pub{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.pub .type{display:inline-block;background:var(--sky);color:var(--blue);font-size:.85rem;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:8px}
+.pub h3{font:600 1.2rem/1.35 var(--serif);margin:0 0 4px}
+.pub p{margin:0;color:var(--muted);font-size:.97rem}
+.todo{color:#9A6A00;background:#FFF6DB;padding:0 6px;border-radius:4px}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.media{aspect-ratio:16/9;background:var(--sky);display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:12px}
+.proj .body{padding:18px 20px 22px}
+.proj h3{font:600 1.15rem/1.3 var(--serif);margin:0 0 8px}
+.proj p{margin:0;color:var(--muted);font-size:.97rem}
+
+/* news */
+.news{list-style:none;margin:0;padding:0;max-width:720px}
+.news li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.news li:last-child{border-bottom:0}
+.news time{font-weight:700;color:var(--blue)}
+
+/* contact */
+.contact p{max-width:60ch;color:var(--muted);margin:0 0 20px}
+
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+
+@media (max-width:760px){
+  .hero{padding:48px 0 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .news li{grid-template-columns:1fr;gap:2px}
+  .topbar .wrap{height:auto;padding-top:8px;padding-bottom:8px;flex-direction:column;align-items:flex-start;gap:4px}
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Marta Goyena</h1>
-    <p>Investigadora en Realidad Extendida y Accesibilidad</p>
-    <nav>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Marta Goyena</a>
+    <nav aria-label="Main">
       <ul>
-        <li><a>About</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="curriculum.html">Currículum</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <section id="biografia">
-    <h2>About me</h2>
-    <p>Born in Pamplona/Iruña, Navarra, Spain. 
-      I am a researcher at Nokia Transformation, Engineering & Consulting Services Spain (TECSS) since March 2024, working in the XR Lab on the Incluverso 5G project. 
-      I am also a PhD student at the Grupo de Tratamiento de Imágenes (GTI) of the Universidad Politécnica de Madrid (UPM).</p>
-    
-    <p>I hold a Bachelor's degree in Telecommunication Engineering from the Universidad Pública de Navarra (UPNA) and a Master's degree in Telecommunication Engineering from the Universidad Politécnica de Madrid (UPM). 
-      During my studies, I completed an Erasmus stay at the École Supérieure d'Ingénieurs en Électronique et Électrotechnique (ESIEE) in Paris, where I developed a brain-computer interface system for prosthesis control. 
-      My master's thesis involved creating an immersive therapy tool for people with stair phobia and intellectual disabilities.</p>
-
-    <p>My research interests include immersive and accessible XR technologies, cognitive and behavioral therapy, and inclusive human-computer interaction.</p>
-  </section>
-
-  <section id="noticias">
-  <h2>News</h2>
-  <ul class="news-list">
-    <li>
-      <strong>March 2025:</strong> Accepted in the Doctoral Consortium at IEEE VR Workshop, Saint Malo, France.
-    </li>
-    <li>
-      <strong>February 2025:</strong> Participated in the International Day of Women and Girls in Science, Madrid, Spain. Presented XR tools for cognitive therapy.
-    </li>
-    <li>
-      <strong>November 2024:</strong> Demonstrated Incluverso5G XR project at Semana de la Ciencia, Madrid, Spain.
-    </li>
-    <li>
-      <strong>September 2024:</strong> Best Demo Award at IEEE PIMRC, Valencia, Spain.
-    </li>
-    <li>
-      <strong>April 2024:</strong> Bio Med & Tech Talks, Granada, Spain. Presented inclusive XR therapies.
-    </li>
-  </ul>
-  </section>
-
-<section id="contacto">
-  <h2>Contact</h2>
-  <div class="contact-items-horizontal">
-    <a href="mailto:marta.goyena_morata.ext@nokia.com" class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="contact-icon">
-    </a>
-    <a href="tel:+34682440480" class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Teléfono" class="contact-icon">
-    </a>
-    <a href="https://www.linkedin.com/in/marta-goyena-morata-b63365236" target="_blank" class="contact-item">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="contact-icon">
-    </a>
   </div>
-</section>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Marta Goyena</p>
-  </footer>
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Marta Goyena</h1>
+        <p class="role">PhD researcher in extended reality and accessibility</p>
+        <p class="lede">I design and evaluate immersive tools that make therapy and everyday interaction more inclusive, from stair-phobia therapy in VR to 5G-powered XR experiences.</p>
+        <div class="btns">
+          <a class="btn primary" href="#publications">Read my publications</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <aside class="affil" aria-label="Affiliations">
+        <h2>Where I work</h2>
+        <dl>
+          <dt>Nokia TECSS, XR Lab</dt>
+          <dd>Researcher on the Incluverso 5G project, since March 2024</dd>
+          <dt>Universidad Politécnica de Madrid</dt>
+          <dd>PhD student, Grupo de Tratamiento de Imágenes (GTI)</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2 class="sec">About</h2>
+      <p>I was born in Pamplona/Iruña, Navarra, and I now work in Madrid. I am a researcher at Nokia Transformation, Engineering &amp; Consulting Services Spain (TECSS), where I work in the XR Lab on the Incluverso 5G project. I am also a PhD student at the Grupo de Tratamiento de Imágenes (GTI) of the Universidad Politécnica de Madrid (UPM).</p>
+      <p>I hold a Bachelor’s degree in Telecommunication Engineering from the Universidad Pública de Navarra (UPNA) and a Master’s degree in Telecommunication Engineering from UPM. During an Erasmus stay at ESIEE Paris, I developed a brain-computer interface for prosthesis control. My master’s thesis was an immersive therapy tool for people with stair phobia and intellectual disabilities.</p>
+      <ul class="tags" aria-label="Research interests">
+        <li>Immersive and accessible XR</li>
+        <li>Cognitive and behavioral therapy</li>
+        <li>Inclusive human-computer interaction</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <h2 class="sec">Publications</h2>
+      <ul class="pubs">
+        <li class="pub">
+          <span class="type">Journal article</span>
+          <h3><span class="todo">Add paper title</span></h3>
+          <p>Virtual Reality (journal), <span class="todo">year</span> · <a href="#">Paper</a></p>
+        </li>
+        <li class="pub">
+          <span class="type">Conference paper</span>
+          <h3><span class="todo">Add paper title</span></h3>
+          <p>ACM International Conference on Interactive Media Experiences (IMX), <span class="todo">year</span> · <a href="#">Paper</a></p>
+        </li>
+        <li class="pub">
+          <span class="type">Doctoral Consortium</span>
+          <h3><span class="todo">Add paper title</span></h3>
+          <p>IEEE VR Workshop, Saint-Malo, France, 2025 · <a href="#">Paper</a></p>
+        </li>
+        <li class="pub">
+          <span class="type">Demo</span>
+          <h3><span class="todo">Add demo title</span></h3>
+          <p>IEEE VR, <span class="todo">year</span> · <a href="#">Paper</a> · <a href="#">Video</a></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2 class="sec">Projects</h2>
+      <div class="projects">
+        <article class="proj">
+          <div class="media">Add a demo video or GIF</div>
+          <div class="body">
+            <h3>Incluverso 5G</h3>
+            <p>An inclusive XR project running over 5G, developed at Nokia’s XR Lab. Presented at Semana de la Ciencia 2024.</p>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="media">Add a demo video or GIF</div>
+          <div class="body">
+            <h3>Immersive therapy for stair phobia</h3>
+            <p>A VR therapy tool for people with stair phobia and intellectual disabilities, built for my master’s thesis.</p>
+          </div>
+        </article>
+        <article class="proj">
+          <div class="media">Add a demo video or GIF</div>
+          <div class="body">
+            <h3>Brain-computer interface for prosthesis control</h3>
+            <p>A BCI system for controlling a prosthesis, developed during my Erasmus stay at ESIEE Paris.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="wrap">
+      <h2 class="sec">News</h2>
+      <ul class="news">
+        <li><time datetime="2025-03">March 2025</time><span>Accepted to the Doctoral Consortium at the IEEE VR Workshop, Saint-Malo, France.</span></li>
+        <li><time datetime="2025-02">February 2025</time><span>Presented XR tools for cognitive therapy at the International Day of Women and Girls in Science, Madrid.</span></li>
+        <li><time datetime="2024-11">November 2024</time><span>Demonstrated the Incluverso 5G XR project at Semana de la Ciencia, Madrid.</span></li>
+        <li><time datetime="2024-09">September 2024</time><span>Won the Best Demo Award at IEEE PIMRC, Valencia.</span></li>
+        <li><time datetime="2024-04">April 2024</time><span>Presented inclusive XR therapies at Bio Med &amp; Tech Talks, Granada.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2 class="sec">Contact</h2>
+      <p>I’m happy to talk about XR research, accessibility and collaborations.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:marta.goyena_morata.ext@nokia.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/marta-goyena-morata-b63365236" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="#">Google Scholar</a>
+        <a class="btn ghost" href="#">CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Marta Goyena</div>
+</footer>
+
 </body>
 </html>
