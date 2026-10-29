@@ -8,92 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#F8FAFD; --surface:#FFFFFF; --ink:#1C2B3D; --muted:#5A6B7E; --line:#DCE5EF;
-  --blue:#2B63C9; --sky:#E6EFFC; --mint:#E3F4EC; --mint-ink:#1F6B4C;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
-a{color:var(--blue);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
-.wrap{max-width:940px;margin:0 auto;padding:0 24px}
-
-/* nav */
-.topbar{position:sticky;top:0;z-index:10;background:rgba(248,250,253,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
-.brand{font:600 1.1rem var(--serif);color:var(--ink);text-decoration:none}
-.topbar ul{display:flex;gap:4px;margin:0;padding:0;list-style:none;overflow-x:auto}
-.topbar li a{display:block;padding:8px 12px;border-radius:8px;color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap}
-.topbar li a:hover{background:var(--sky);color:var(--ink)}
-
-/* hero */
-.hero{padding:72px 0 56px}
-.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
-h1{font:600 clamp(2.6rem,6vw,4.25rem)/1.05 var(--serif);letter-spacing:-.02em;margin:0 0 16px}
-.role{font-size:1.25rem;color:var(--ink);margin:0 0 16px;font-weight:500}
-.lede{color:var(--muted);max-width:52ch;margin:0 0 28px}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:11px 20px;border-radius:10px;font-weight:700;text-decoration:none;border:1.5px solid var(--blue)}
-.btn.primary{background:var(--blue);color:#fff}
-.btn.primary:hover{background:#2250A8}
-.btn.ghost{color:var(--blue);background:transparent}
-.btn.ghost:hover{background:var(--sky)}
-.affil{background:var(--sky);border-radius:18px;padding:28px}
-.affil h2{font:600 1.15rem var(--serif);margin:0 0 16px}
-.affil dl{margin:0}
-.affil dt{font-weight:700;font-size:.95rem}
-.affil dd{margin:0 0 14px;color:var(--muted);font-size:.95rem}
-.affil dd:last-child{margin-bottom:0}
-
-/* sections */
-section{padding:56px 0;border-top:1px solid var(--line)}
-h2.sec{font:600 2rem/1.2 var(--serif);margin:0 0 24px;letter-spacing:-.01em}
-.about p{max-width:68ch;margin:0 0 16px}
-.about p:last-child{margin-bottom:0}
-.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:20px 0 0;list-style:none}
-.tags li{background:var(--mint);color:var(--mint-ink);padding:5px 12px;border-radius:999px;font-size:.9rem;font-weight:500}
-
-/* publications */
-.pubs{list-style:none;margin:0;padding:0;display:grid;gap:16px}
-.pub{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
-.pub .type{display:inline-block;background:var(--sky);color:var(--blue);font-size:.85rem;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:8px}
-.pub h3{font:600 1.2rem/1.35 var(--serif);margin:0 0 4px}
-.pub p{margin:0;color:var(--muted);font-size:.97rem}
-.todo{color:#9A6A00;background:#FFF6DB;padding:0 6px;border-radius:4px}
-
-/* projects */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.media{aspect-ratio:16/9;background:var(--sky);display:grid;place-items:center;color:var(--muted);font-size:.9rem;text-align:center;padding:12px}
-.proj .body{padding:18px 20px 22px}
-.proj h3{font:600 1.15rem/1.3 var(--serif);margin:0 0 8px}
-.proj p{margin:0;color:var(--muted);font-size:.97rem}
-
-/* news */
-.news{list-style:none;margin:0;padding:0;max-width:720px}
-.news li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.news li:last-child{border-bottom:0}
-.news time{font-weight:700;color:var(--blue)}
-
-/* contact */
-.contact p{max-width:60ch;color:var(--muted);margin:0 0 20px}
-
-footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
-
-@media (max-width:760px){
-  .hero{padding:48px 0 40px}
-  .hero .wrap{grid-template-columns:1fr;gap:32px}
-  .news li{grid-template-columns:1fr;gap:2px}
-  .topbar .wrap{height:auto;padding-top:8px;padding-bottom:8px;flex-direction:column;align-items:flex-start;gap:4px}
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 
 <header class="topbar">
   <div class="wrap">
@@ -114,23 +33,28 @@ footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);f
   <div class="hero">
     <div class="wrap">
       <div>
-        <h1>Marta Goyena</h1>
-        <p class="role">PhD researcher in extended reality and accessibility</p>
-        <p class="lede">I design and evaluate immersive tools that make therapy and everyday interaction more inclusive, from stair-phobia therapy in VR to 5G-powered XR experiences.</p>
-        <div class="btns">
+        <h1 class="rise" style="--d:0ms">Marta Goyena</h1>
+        <p class="role rise" style="--d:120ms">PhD researcher in extended reality and accessibility</p>
+        <p class="lede rise" style="--d:240ms">I design and evaluate immersive tools that make therapy and everyday interaction more inclusive, from stair-phobia therapy in VR to 5G-powered XR experiences.</p>
+        <div class="btns rise" style="--d:360ms">
           <a class="btn primary" href="#publications">Read my publications</a>
           <a class="btn ghost" href="#contact">Get in touch</a>
         </div>
       </div>
-      <aside class="affil" aria-label="Affiliations">
-        <h2>Where I work</h2>
-        <dl>
-          <dt>Nokia TECSS, XR Lab</dt>
-          <dd>Researcher on the Incluverso 5G project, since March 2024</dd>
-          <dt>Universidad Politécnica de Madrid</dt>
-          <dd>PhD student, Grupo de Tratamiento de Imágenes (GTI)</dd>
-        </dl>
-      </aside>
+      <div class="stage rise" style="--d:200ms">
+        <span class="layer l1" aria-hidden="true"></span>
+        <span class="layer l2" aria-hidden="true"></span>
+        <span class="layer l3" aria-hidden="true"></span>
+        <aside class="affil" aria-label="Affiliations">
+          <h2>Where I work</h2>
+          <dl>
+            <dt>Nokia TECSS, XR Lab</dt>
+            <dd>Researcher on the Incluverso 5G project, since March 2024</dd>
+            <dt>Universidad Politécnica de Madrid</dt>
+            <dd>PhD student, Grupo de Tratamiento de Imágenes (GTI)</dd>
+          </dl>
+        </aside>
+      </div>
     </div>
   </div>
 
@@ -150,23 +74,30 @@ footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);f
   <section id="publications">
     <div class="wrap">
       <h2 class="sec">Publications</h2>
+      <div class="filters" role="group" aria-label="Filter publications by type">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="journal" aria-pressed="false">Journal</button>
+        <button type="button" data-filter="conference" aria-pressed="false">Conference</button>
+        <button type="button" data-filter="consortium" aria-pressed="false">Doctoral Consortium</button>
+        <button type="button" data-filter="demo" aria-pressed="false">Demo</button>
+      </div>
       <ul class="pubs">
-        <li class="pub">
+        <li class="pub" data-type="journal">
           <span class="type">Journal article</span>
           <h3><span class="todo">Add paper title</span></h3>
           <p>Virtual Reality (journal), <span class="todo">year</span> · <a href="#">Paper</a></p>
         </li>
-        <li class="pub">
+        <li class="pub" data-type="conference">
           <span class="type">Conference paper</span>
           <h3><span class="todo">Add paper title</span></h3>
           <p>ACM International Conference on Interactive Media Experiences (IMX), <span class="todo">year</span> · <a href="#">Paper</a></p>
         </li>
-        <li class="pub">
+        <li class="pub" data-type="consortium">
           <span class="type">Doctoral Consortium</span>
           <h3><span class="todo">Add paper title</span></h3>
           <p>IEEE VR Workshop, Saint-Malo, France, 2025 · <a href="#">Paper</a></p>
         </li>
-        <li class="pub">
+        <li class="pub" data-type="demo">
           <span class="type">Demo</span>
           <h3><span class="todo">Add demo title</span></h3>
           <p>IEEE VR, <span class="todo">year</span> · <a href="#">Paper</a> · <a href="#">Video</a></p>
@@ -220,7 +151,7 @@ footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);f
   <section id="contact" class="contact">
     <div class="wrap">
       <h2 class="sec">Contact</h2>
-      <p>I’m happy to talk about XR research, accessibility and collaborations.</p>
+      <p>I’m open to research collaborations and internships in XR, accessibility and human-AI interaction.</p>
       <div class="btns">
         <a class="btn primary" href="mailto:marta.goyena_morata.ext@nokia.com">Email me</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/marta-goyena-morata-b63365236" target="_blank" rel="noopener">LinkedIn</a>
@@ -234,6 +165,5 @@ footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);f
 <footer>
   <div class="wrap">&copy; 2026 Marta Goyena</div>
 </footer>
-
 </body>
 </html>
