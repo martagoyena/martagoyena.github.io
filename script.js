@@ -4,20 +4,23 @@
   // 1. Scroll progress bar
   var bar = document.querySelector('.progress');
   function updateProgress() {
+    if (!bar) return;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
   }
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  // 2. Highlight the nav link of the section in view
+  // 2. Highlight the nav link of the section in view (only links that point to this page)
   var links = document.querySelectorAll('.topbar nav a');
   var sections = [];
   links.forEach(function (a) {
-    var s = document.querySelector(a.getAttribute('href'));
+    var href = a.getAttribute('href') || '';
+    if (href.charAt(0) !== '#' || href.length < 2) return;
+    var s = document.querySelector(href);
     if (s) sections.push({ link: a, el: s });
   });
-  if ('IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window && sections.length) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;

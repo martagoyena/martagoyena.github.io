@@ -1,15 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pericardiocentesis XR Training | Marta Goyena</title>
-  <meta name="description" content="Exploring interaction methods for XR-based pericardiocentesis training.">
+  <meta name="description" content="Comparing controllers, hand tracking and haptic gloves in an XR simulation of pericardiocentesis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../project.css">
   <script src="../script.js" defer></script>
 </head>
 <body>
@@ -30,14 +30,14 @@
   </header>
 
   <main>
-    <header class="project-hero">
+    <div class="project-hero">
       <div class="wrap">
         <p class="breadcrumb"><a href="../index.html#projects">← Back to projects</a></p>
         <h1>Pericardiocentesis XR Training</h1>
         <p class="lede">
-          Exploring how different input devices can support interaction with
-          an immersive simulation of a clinical procedure, with a focus on
-          controllers, hand tracking and haptic gloves.
+          How should a learner handle virtual medical instruments in XR? I compare
+          controllers, hand tracking and haptic gloves in an immersive simulation of
+          pericardiocentesis, and I gather feedback from healthcare professionals.
         </p>
         <div class="project-meta">
           <span>Medical XR training</span>
@@ -45,72 +45,106 @@
           <span>Haptic feedback</span>
           <span>User evaluation</span>
         </div>
-
-        <div class="project-hero-media">
-          <p><strong>Project media placeholder</strong><br>
-          Add a real screenshot of the simulation, the experimental setup or a
-          short video of the procedure.</p>
+        <div class="btns">
+          <!-- TODO: replace # with the GitHub repository URL and the demo video URL -->
+          <a class="btn primary" href="#" target="_blank" rel="noopener">View code on GitHub</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">Watch the demo</a>
         </div>
+
+        <figure class="shot project-hero-media">
+          <!-- To add a photo: replace the div below with <img src="../images/pericardiocentesis-hero.jpg" alt="Describe the photo"> -->
+          <div class="ph">Photo: a participant using the simulation</div>
+          <figcaption>Add a caption that says who is doing what, for example the interaction method being tested.</figcaption>
+        </figure>
       </div>
-    </header>
+    </div>
 
     <section class="detail-section">
       <div class="wrap detail-grid">
         <div class="detail-copy">
-          <h2>The challenge</h2>
+          <h2>Why this project</h2>
           <p>
-            Pericardiocentesis is a clinical procedure used to remove fluid
-            from the space surrounding the heart. XR can provide a controlled
-            environment in which learners can become familiar with procedural
-            steps and practise interacting with virtual instruments.
+            Pericardiocentesis is a clinical procedure that removes fluid from the space
+            around the heart. It is hands-on and high-stakes, so a safe place to practise
+            it is valuable.
           </p>
           <p>
-            Interaction is an important part of this experience. Controllers,
-            tracked hands and haptic gloves offer different ways to manipulate
-            virtual tools, and their suitability should be examined in the
-            context of the task rather than assumed.
+            In an XR simulator, the way a learner holds and moves virtual instruments is
+            part of the learning experience. Controllers, tracked hands and haptic gloves
+            each change how natural and precise that feels, so I want to test which one
+            works best for this task instead of assuming.
           </p>
         </div>
 
-        <aside class="detail-card">
-          <h3>Research focus</h3>
-          <ul>
-            <li>Interaction with virtual medical instruments</li>
-            <li>Controllers, hand tracking and haptic gloves</li>
-            <li>Task execution and interaction behaviour</li>
-            <li>Usability, workload and user experience</li>
-          </ul>
+        <aside class="detail-card facts">
+          <h3>At a glance</h3>
+          <dl>
+            <dt>My role</dt>
+            <dd>XR interaction and evaluation</dd>
+            <dt>Starting point</dt>
+            <dd>An existing XR simulation of the procedure <span class="todo">credit the original authors</span></dd>
+            <dt>Hardware</dt>
+            <dd>HTC XR Elite, SenseGlove Nova 2 gloves</dd>
+            <dt>Software</dt>
+            <dd>Unity</dd>
+            <dt>Feedback from</dt>
+            <dd>Healthcare professionals</dd>
+          </dl>
         </aside>
+      </div>
+    </section>
+
+    <section class="detail-section questions">
+      <div class="wrap">
+        <h2>What I want to find out</h2>
+        <p class="section-lede">Four questions guide the study, each with the reason I am asking it.</p>
+        <ol class="rq-list">
+          <li class="rq">
+            <h3>How do controllers, hand tracking and haptic gloves compare for handling virtual instruments in this procedure?</h3>
+            <p><strong>Why:</strong> each device changes how natural and precise the task feels, and the best choice for training should be tested.</p>
+          </li>
+          <li class="rq">
+            <h3>How do these methods affect usability, workload, presence and comfort?</h3>
+            <p><strong>Why:</strong> a training tool only helps if learners can focus on the procedure instead of fighting the interface.</p>
+          </li>
+          <li class="rq">
+            <h3>What can movement and interaction data show about how people carry out the task?</h3>
+            <p><strong>Why:</strong> questionnaires capture opinions, while tracking data shows what users actually do.</p>
+          </li>
+          <li class="rq">
+            <h3>How do healthcare professionals judge each method for training?</h3>
+            <p><strong>Why:</strong> clinicians know the real procedure, so their feedback tells us what is realistic and useful.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <section class="detail-section">
       <div class="wrap">
-        <h2>Interaction methods</h2>
+        <h2>Three ways to interact</h2>
         <div class="projects">
-          <article class="detail-card">
+          <article class="detail-card method">
+            <figure class="shot">
+              <div class="ph">Photo: controllers</div>
+            </figure>
             <h3>Controllers</h3>
-            <p>
-              Controller-based interaction provides a tracked input method
-              for manipulating virtual instruments and carrying out the task.
-            </p>
+            <p>A tracked, handheld input method for picking up and moving the virtual instruments.</p>
           </article>
 
-          <article class="detail-card">
+          <article class="detail-card method">
+            <figure class="shot">
+              <div class="ph">Photo: hand tracking</div>
+            </figure>
             <h3>Hand tracking</h3>
-            <p>
-              Hand tracking allows users to interact through their tracked
-              hands, without relying on conventional handheld controllers.
-            </p>
+            <p>Users interact with their own tracked hands, without holding any device.</p>
           </article>
 
-          <article class="detail-card">
+          <article class="detail-card method">
+            <figure class="shot">
+              <div class="ph">Photo: haptic gloves</div>
+            </figure>
             <h3>Haptic gloves</h3>
-            <p>
-              SenseGlove Nova 2 gloves introduce a wearable input method with
-              haptic feedback. Their setup and hand calibration are important
-              parts of the interaction workflow.
-            </p>
+            <p>SenseGlove Nova 2 gloves add haptic feedback. Their setup and hand calibration are part of the workflow.</p>
           </article>
         </div>
       </div>
@@ -119,30 +153,27 @@
     <section class="detail-section">
       <div class="wrap detail-grid">
         <div class="detail-copy">
-          <h2>My contribution</h2>
+          <h2>What I do</h2>
           <p>
-            My work focuses on XR interaction and evaluation. This includes
-            working with alternative input devices, considering their
-            practical setup and calibration requirements, and examining how
-            users interact with virtual instruments during the procedure.
+            I work on the interaction and the evaluation. That means integrating the
+            alternative input devices, handling their setup and calibration, and studying
+            how users interact with the virtual instruments during the procedure.
           </p>
           <p>
-            The evaluation approach combines subjective measures with
-            information about users' movements and interactions. The aim is
-            to understand the experience of using each interaction method in
-            the context of a specific medical-training task.
+            The evaluation combines questionnaires with data about users’ movements and
+            interactions, plus open feedback from the professionals who try it.
           </p>
         </div>
 
         <aside class="detail-card">
-          <h3>Evaluation dimensions</h3>
+          <h3>What I measure</h3>
           <ul>
-            <li>Usability — SUS</li>
-            <li>Perceived workload — NASA-TLX</li>
-            <li>Simulator sickness — SSQ / SSSQ, as applicable</li>
-            <li>Presence — IPQ</li>
+            <li>Usability, with SUS</li>
+            <li>Workload, with NASA-TLX</li>
+            <li>Simulator sickness, with SSQ or SSSQ as applicable</li>
+            <li>Presence, with IPQ</li>
             <li>Movement and interaction data</li>
-            <li>Open-ended user feedback</li>
+            <li>Open-ended feedback</li>
           </ul>
         </aside>
       </div>
@@ -150,40 +181,39 @@
 
     <section class="detail-section">
       <div class="wrap">
-        <h2>Technical setup</h2>
-        <div class="detail-card">
-          <p>
-            The prototype is developed in Unity for an XR headset environment.
-            The experimental setup includes an HTC XR Elite and SenseGlove
-            Nova 2 gloves, alongside controller-based and hand-tracking
-            interaction.
-          </p>
-          <p>
-            Device setup, calibration and tracking are relevant practical
-            considerations when preparing an XR study. The evaluation also
-            considers how interaction data can help characterise task
-            execution.
-          </p>
+        <h2>Setup in practice</h2>
+        <div class="gallery">
+          <figure class="shot">
+            <div class="ph">Photo: the experimental setup</div>
+            <figcaption>The headset, gloves and workspace used in the study.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="ph">Photo: glove calibration</div>
+            <figcaption>Calibrating the haptic gloves before a session.</figcaption>
+          </figure>
+          <figure class="shot">
+            <div class="ph">Screenshot: the simulation</div>
+            <figcaption>The virtual scene as the learner sees it.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <section class="detail-section">
-      <div class="wrap">
-        <h2>Relevance to XR interaction research</h2>
-        <p class="detail-copy">
-          This project connects spatial interaction, wearable haptics and
-          human–computer interaction with a concrete training application.
-          It provides a context for investigating how input devices and
-          feedback shape the experience of manipulating virtual tools.
-        </p>
-        <ul class="tags">
-          <li>Spatial interaction</li>
-          <li>Multimodal input</li>
-          <li>Haptic devices</li>
-          <li>XR training</li>
-          <li>User-centred evaluation</li>
-        </ul>
+      <div class="wrap detail-grid">
+        <div class="detail-copy">
+          <h2>Where it stands</h2>
+          <p><span class="todo">Add the current status, for example: data collection under way, analysis in progress, first results, or next steps.</span></p>
+        </div>
+
+        <aside class="detail-card">
+          <h3>Code and resources</h3>
+          <ul class="link-list">
+            <!-- TODO: replace each # with the real URL -->
+            <li><a href="#" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Demo video</a></li>
+          </ul>
+        </aside>
       </div>
     </section>
 
